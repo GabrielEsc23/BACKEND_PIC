@@ -179,6 +179,7 @@ msg:"Error al crear proyecto"
     await registrarActividad({
       usuario: req.usuario._id,
       usuarioModelo: req.usuario.rol === "administrador" ? "Administrador" : "Usuario",
+      email:req.usuario.email,
       accion: "eliminar_proyecto",
       resultado: "exito",
       entidadId: idEliminado,
