@@ -128,6 +128,7 @@ const respuesta = {
 await registrarActividad({
   usuario: req.usuario._id,
   usuarioModelo: req.usuario.rol === "administrador" ? "Administrador" : "Usuario",
+  email:req.usuario.email,
   accion: "crear_proyecto",
   resultado: "exito",
   entidadId: proyectoGuardado._id,
@@ -219,6 +220,7 @@ const cambiarVisibilidadProyecto = async (req, res) => {
     await registrarActividad({
       usuario: req.usuario._id,
       usuarioModelo: req.usuario.rol === "administrador" ? "Administrador" : "Usuario",
+      email:req.usuario.email,
       accion: "cambiar_visibilidad_proyecto",
       resultado: "exito",
       entidadId: proyecto._id,
@@ -305,6 +307,7 @@ const actualizarProyecto = async (req, res) => {
     await registrarActividad({
       usuario: req.usuario._id,
       usuarioModelo: req.usuario.rol === "administrador" ? "Administrador" : "Usuario",
+      email:req.usuario.email,
       accion: "actualizar_proyecto",
       resultado: "exito",
       entidadId: proyecto._id,
