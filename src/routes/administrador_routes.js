@@ -6,7 +6,7 @@ const router=Router()
 
 
 // RUTA: registrar nuevo administrador
-router.post('/administradores',registroAdministrador)
+router.post('/administradores',verificarTokenJWT,esAdministrador,registroAdministrador)
 
 
 
